@@ -10,13 +10,13 @@
 
 		ch = 'a';
 
-		while (ch <= 'z')
+		while (ch <= 'z') /* While loops can only fit one variable here */
 		{
-			if (ch != 'e' && ch != 'q')
+			if (ch != 'e' && ch != 'q') /* Use && to include both statements */
 			{
 				putchar(ch);
 			}
-			ch = ch + 1;
+			ch = ch + 1; /* This line must go after the 'if' */
 		}
 		putchar ('\n');
 		return (0);
