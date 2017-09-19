@@ -2,7 +2,7 @@
 /**
  * _isalpha - prints 1 if c is a letter, and 0 if otherwise.
  * @c: variable for character
- * Return: Always 0
+ * Return: 0 or 1
  */
 int _isalpha(int c)
 {
