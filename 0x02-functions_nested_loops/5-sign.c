@@ -2,7 +2,8 @@
 /**
  * print_sign - prints + if n is positive and - if it is negative.
  * @n: Character for variable
- * Prints sign of integer. Prints 0 is if is 0.
+ * Prints sign of integer. Prints 0 is if 0.
+ * Return: -1, 0, or 1
  */
 int print_sign(int n)
 {
