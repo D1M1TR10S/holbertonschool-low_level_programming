@@ -2,7 +2,7 @@
 /**
  * jack_bauer - print each second of 24 hours.
  * Print each second of a day.
- * Return: 0
+ * Return:
  */
 void jack_bauer(void)
 {
@@ -10,7 +10,7 @@ void jack_bauer(void)
 
 	for (x = '0'; x <= '2'; x++)
 	{
-		for (m = '0'; m < '4'; m++)
+		for (m = '0'; m <= '9'; m++)
 		{
 			for (t = '0'; t < '6'; t++)
 			{
@@ -24,6 +24,8 @@ void jack_bauer(void)
 					_putchar('\n');
 				}
 			}
+			if (x == '2' && m == '3') break;
 		}
 	}
+
 }
