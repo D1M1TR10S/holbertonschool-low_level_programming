@@ -1,7 +1,6 @@
 #include "holberton.h"
 /**
  * print_most_numbers - print numbers 0-9 without 2 and 4
- * @n: integer printed
  * Return: Always 0
  */
 void print_most_numbers(void)
