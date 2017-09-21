@@ -1,6 +1,7 @@
 #include "holberton.h"
 /**
  * _isupper - Returns 1 if c is uppercase.
+ * @c: Integer being analyzed.
  * Return: 1 or 0.
  */
 int _isupper(int c)
