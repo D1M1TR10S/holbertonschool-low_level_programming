@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * print_line - Prints '_' as many times as input says.
- * @n: number of lines spaces.
+ * print_square - Prints a square with # signs.
+ * @size: integer representing dimensions of the square.
  * Return: Always 0
  */
 void print_square(int size)
