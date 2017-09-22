@@ -1,6 +1,7 @@
 #include "holberton.h"
 /**
  * print_triangle - Print a triangle of # signs
+ * @size: Dimensions of triangle
  * Return: 0
  */
 void print_triangle(int size)
