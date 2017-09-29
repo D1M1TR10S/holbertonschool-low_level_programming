@@ -10,18 +10,17 @@ char *cap_string(char *c)
 
 	for (i = 0; c[i] != '\0'; i++)
 	{	
-		if (c[i] == ' ' || c[i] == '.')
+		if (c[i] == ' ' || c[i] == '.' || c[i] == '\t')
 		{
 			i++;
 			if (c[i] >= 97 && c[i] <= 122)
 				c[i] = c[i] - 32;
 		}
-		if (c[i] == '\t' || c[i] == '\n')
+		if (c[i] == '\n')
 		{
 			i++;
 			if (c[i] >= 97 && c[i] <= 122)
-				c[i] = c[i] - 32; 
-
+				c[i] = c[i] - 32;
 		}
 	}
 	return (c);
