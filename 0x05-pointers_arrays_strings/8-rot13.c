@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * *leet - Converts AEOTL to l33t characters
+ * *rot13 - rot13 encrypt all letters of the alphabet in a string
  * @c: Character declared as s in the main file
  * Return: c
  */
