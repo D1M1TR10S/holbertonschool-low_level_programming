@@ -14,10 +14,10 @@ char *_strstr(char *haystack, char *needle)
 	{
 		if (haystack[i] == needle[n])
 		{
-			return (needle);
 			if (needle[n] == '\0')
 				break;
 			n++;
+			return (needle);
 		}
 		i++;
 	}
