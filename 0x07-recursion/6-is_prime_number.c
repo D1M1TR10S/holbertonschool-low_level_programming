@@ -19,7 +19,7 @@ int divi(int n, int d)
 {
 	if (n < 0)
 		n = -n;
-	if (n == 1)
+	if ((n == 1) || (n == 0))
 		return (0);
 	if ((n % d == 0) && (n != d))
 		return (0);
