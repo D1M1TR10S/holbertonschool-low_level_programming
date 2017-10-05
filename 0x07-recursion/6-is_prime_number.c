@@ -18,7 +18,7 @@ int is_prime_number(int n)
 int divi(int n, int d)
 {
 	if (n < 0)
-		n = -n;
+		return (0);
 	if ((n == 1) || (n == 0))
 		return (0);
 	if ((n % d == 0) && (n != d))
