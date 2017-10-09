@@ -1,14 +1,19 @@
 #include <stdio.h>
 /**
- * main - print number of arguments in the command line
- * @argc: Argument counter
- * @argv: String printer
+ * main - Print the name of this file
+ * @argc: Counts arguments in command line
+ * @argv: Prints arguments
  * Return: 0
  */
 int main(int argc, char *argv[])
 {
-	__attribute__((unused)) argv;
+	int n = 0;
 
-	printf("%p\n", argc - 1);
+	while (n < argc)
+	{
+		printf("%s\n", argv[n]);
+		n++;
+	}
+
 	return (0);
 }
