@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Print the name of this file
+ * main - Print all arguments with newlines in between
  * @argc: Counts arguments in command line
  * @argv: Prints arguments
  * Return: 0
