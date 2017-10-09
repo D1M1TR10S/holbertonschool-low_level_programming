@@ -1,8 +1,9 @@
 #include <stdio.h>
 /**
- * 
- *
- *
+ * main - print number of arguments in the command line
+ * @argc: Argument counter
+ * @argv: String printer
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
