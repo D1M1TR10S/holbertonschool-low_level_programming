@@ -1,13 +1,14 @@
 #include <stdio.h>
 /**
- * main - Print the name of this file
- * @argc: Number of command line argument
- * @argv: Command line argument
+ * main - print number of arguments in the command line
+ * @argc: Argument counter
+ * @argv: String printer
  * Return: 0
  */
 int main(int argc, char *argv[])
 {
-	*argv = 0;
-	printf("%d\n", argc - 1);
+	__attribute__((unused)) argv;
+
+	printf("%p\n", argc - 1);
 	return (0);
 }
