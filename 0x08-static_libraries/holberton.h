@@ -1,6 +1,5 @@
 #ifndef HOLBERTON
 #define HOLBERTON
-#define NULL 0
 
 int _putchar(char c);
 int _islower(int c);
