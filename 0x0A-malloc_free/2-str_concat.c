@@ -35,15 +35,18 @@ char *str_concat(char *s1, char *s2)
 
 	str = malloc((_strlen(s1) + _strlen(s2) + 1) * sizeof(char));
 	if (str == NULL)
-		return(NULL);
-	for (i = 0; s1[i] != '\0'; i++)
-		str[i] = s1[i];
-	while (s2[n] != '\0')
+		return (NULL);
+	if (str != NULL)
 	{
-		str[i] = s2[n];
-		i++;
-		n++;
+		for (i = 0; s1[i] != '\0'; i++)
+			str[i] = s1[i];
+		while (s2[n] != '\0')
+		{
+			str[i] = s2[n];
+			i++;
+			n++;
+		}
+		str[i] = '\0';
+		return (str);
 	}
-	str[i] = '\0';
-	return (str);
 }
