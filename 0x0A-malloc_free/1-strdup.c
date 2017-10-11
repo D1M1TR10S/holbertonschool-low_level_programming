@@ -1,6 +1,12 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ * _strlen - Check the length of a string
+ * @s: String being tested
+ * Return: l.
+ */
+
 int _strlen(char *s)
 {
 	int l = 0;
@@ -14,7 +20,7 @@ int _strlen(char *s)
 /**
  * *_strdup - Returns a pointer to a new string
  * @str: Starting char in string
- * Return: Always 0.
+ * Return: s.
  */
 char *_strdup(char *str)
 {
@@ -23,7 +29,7 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	
+
 	s = malloc((_strlen(str) + 1) * sizeof(char));
 
 	if (s != NULL)
