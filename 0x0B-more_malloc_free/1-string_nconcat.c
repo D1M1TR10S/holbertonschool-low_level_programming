@@ -8,7 +8,7 @@
  */
 int _strlen(char *s)
 {
-	int l;
+	unsigned int l;
 
 	l = 0;
 	while (s[l] != '\0')
@@ -17,16 +17,17 @@ int _strlen(char *s)
 }
 /**
  * string_nconcat - Concatenate two strings
- * @s1:
- * @s2:
- * @n:
- * Return:
+ * @s1: First string coming in
+ * @s2: Second string coming in
+ * @n: number of bytes being concatenated from s2
+ * Return: ptr
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i;
 	unsigned int j;
 	unsigned int m = _strlen(s1);
+	unsigned int n2 = _strlen(s2);
 	char *ptr;
 
 	if (s1 == NULL)
@@ -34,7 +35,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	ptr = malloc((m + n) * sizeof(char) + 1);
+	if (n2 < n)
+		n2 = _strlen(s2);
+
+	ptr = malloc((m + n2) * sizeof(char) + 1);
 	if (ptr == NULL)
 		return (NULL);
 
