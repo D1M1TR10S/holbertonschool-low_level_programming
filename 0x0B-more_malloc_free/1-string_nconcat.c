@@ -10,11 +10,9 @@ int _strlen(char *s)
 {
 	unsigned int l = 0;
 
-	while (*s)
-	{
-		s++;
+	while (s[l] != '\0')
 		l++;
-	}
+
 	return (l);
 }
 /**
@@ -27,16 +25,13 @@ int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i, j, count;
-	unsigned int m = _strlen(s2);
+	/* unsigned int m = _strlen(s2); */
 	char *ptr;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-
-	if (n > m)
-		n = m;
 
 	count = _strlen(s1) + n;
 
