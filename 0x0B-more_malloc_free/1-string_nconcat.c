@@ -9,7 +9,7 @@
 int _strlen(char *s)
 {
 	int l;
-	
+
 	l = 0;
 	while (s[l] != '\0')
 		l++;
@@ -33,7 +33,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	
 
 	count = _strlen(s1) + 1 + n;
 
