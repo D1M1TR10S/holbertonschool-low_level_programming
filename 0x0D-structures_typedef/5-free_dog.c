@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "dog.h"
 /**
  * free_dog - Free all the dogs malloced by previous programs
@@ -8,8 +9,8 @@
 void free_dog(dog_t *d)
 {
 	if (d == NULL)
-		return (NULL);
-	free (d->name);
-	free (d->owner);
-	free (d);
+		return;
+	free(d->name);
+	free(d->owner);
+	free(d);
 }
