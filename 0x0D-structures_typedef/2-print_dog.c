@@ -2,7 +2,7 @@
 #include "dog.h"
 /**
  * print_dog - Prints the name, age, and owner of "struct dog"
- * @d - Pointer to struct dog
+ * @dog *d - Pointer to struct dog
  * Return: void
  */
 void print_dog(struct dog *d)
@@ -18,7 +18,7 @@ void print_dog(struct dog *d)
 			printf("Age: %f\n", d->age);
 		else
 			printf("Age: (nil)");
-		
+
 		if (d->owner)
 			printf("Owner: %s\n", d->owner);
 		else
