@@ -9,8 +9,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int val1 = atoi(argv[1]);
-	int val2 = atoi(argv[3]);
+	int val1;
+	int val2;
 	int (*result)(int, int);
 
 	if (argc != 4)
@@ -18,6 +18,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (98);
 	}
+	val1 = atoi(argv[1]);
+	val2 = atoi(argv[3]);
 	if ((*argv[2] == '/' || *argv[2] == '%') && *argv[3] == '0')
 	{
 		printf("Error\n");
