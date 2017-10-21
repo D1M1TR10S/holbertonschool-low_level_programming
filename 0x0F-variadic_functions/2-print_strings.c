@@ -3,11 +3,11 @@
 #include "variadic_functions.h"
 
 /**
- * print_numbers - Print numbers sent in as arguments
- * @separator: Character printed between each argument in output
+ * print_strings - Print strings from input, separated by commas
+ * @separator: comma and space between strings
  * @n: Number of integers to be printed
  * @...: Variable arguments coming from standard input
- * Return: Always 0.
+ * Return: Void
  */
 
 void print_strings(const char *separator, const unsigned int n, ...)
@@ -16,21 +16,19 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	char *str;
 
-	if (separator == NULL)
-		return;
-
 	va_start(strings, n);
-	for (i = 0; i < n - 1; i++)
+	for (i = 0; i < n; i++)
 	{
 		str = va_arg(strings, char *);
 		if (str == NULL)
-		{
 			printf("(nil)");
-			break;
-		}
+
 		else
-			printf("%s%s", str, separator);
+			printf("%s", str);
+
+		if (i < (n - 1) && separator != NULL)
+			printf("%s", separator);
 	}
-	printf("%s\n", va_arg(strings, char *));
+	printf("\n");
 	va_end(strings);
 }
