@@ -31,21 +31,22 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			str = va_arg(input, char *);
-			if (str == NULL)
+			switch (*str)
 			{
-				printf("(nil)");
-				break;
+				case '\0':
+					printf("(nil)");
+					break;
+				default:
+					printf("%s", str);
+					break;
 			}
-			printf("%s", str);
-			break;
 		default:
 			n = 1;
 			break;
 		}
 		if (format[i + 1] != '\0' && n == 0)
 			printf(", ");
-		i++;
-		n = 0;
+		n = 0, i++;
 	}
 	printf("\n");
 	va_end(input);
