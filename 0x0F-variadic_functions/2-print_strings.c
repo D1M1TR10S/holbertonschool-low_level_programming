@@ -24,8 +24,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		str = va_arg(strings, char *);
 		if (str == NULL)
+		{
+			printf("(nil)");
 			break;
-		printf("%s%s", str, separator);
+		}
+		else
+			printf("%s%s", str, separator);
 	}
 	printf("%s\n", va_arg(strings, char *));
 	va_end(strings);
