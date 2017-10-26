@@ -3,9 +3,9 @@
 #include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * list_len - Return length of the linked list 
+ * @h: Pointer to first node
+ * Return: elements.
  */
 
 size_t list_len(const list_t *h)
