@@ -3,8 +3,8 @@
 #include "lists.h"
 
 /**
- * list_len - Return length of the linked list 
- * @*h: Pointer to first node
+ * list_len - Return length of the linked list
+ * @h: Pointer to first node
  * Return: elements.
  */
 
