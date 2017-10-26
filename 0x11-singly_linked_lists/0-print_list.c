@@ -4,8 +4,8 @@
 
 /**
  * print_list - Print list of nodes and the length of each string
- * 
- * Return: Always 0.
+ * @h: Pointer to node
+ * Return: Number of nodes.
  */
 
 size_t print_list(const list_t *h)
