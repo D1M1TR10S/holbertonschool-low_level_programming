@@ -1,16 +1,17 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "lists.h"
-
 /**
  * print_list - Print list of nodes and the length of each string
  * @h: Pointer to node
  * Return: n
  */
-
 size_t print_list(const list_t *h)
 {
 	int n = 0;
+
+	if (h == NULL)
+		return (0);
 
 	while (h != NULL)
 	{
