@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 #ifndef list
 #define list
 typedef struct listint_s
