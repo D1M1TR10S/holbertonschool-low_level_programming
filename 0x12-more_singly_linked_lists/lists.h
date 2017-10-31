@@ -1,8 +1,8 @@
+#ifndef list
+#define list
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-#ifndef list
-#define list
 typedef struct listint_s
 {
     int n;
