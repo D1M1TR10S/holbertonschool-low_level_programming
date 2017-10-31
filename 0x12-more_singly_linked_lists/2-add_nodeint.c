@@ -1,0 +1,29 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "lists.h"
+/**
+ * add_nodeint - Add a node with an integer to the front of the list
+ * @head: First node
+ * @n: Value being held in the node
+ * Return: Always 0.
+ */
+listint_t *add_nodeint(listint_t **head, const int n)
+{
+	listint_t *new_node;
+
+	new_node = (listint_t *) malloc(sizeof(listint_t));
+
+	if (head == NULL)
+		return (NULL);
+
+	if (*head == NULL)
+		new_node->next = NULL;
+	else
+		new_node->next = (*head);
+
+	new_node->n = n;
+
+	(*head) = new_node;
+	return (*head);
+}
