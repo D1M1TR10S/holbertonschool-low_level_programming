@@ -1,11 +1,16 @@
 #include "holberton.h"
+/**
+ * binary - Convert decimal into binary with recursive function
+ * @n: Integer coming in
+ * Return: Void
+ */
 void binary(unsigned long int n)
 {
 	if (n != 0)
 		binary(n >> 1);
 	else
 		return;
-	
+
 	n = n & 1;
 
 	if (n == 1)
@@ -17,14 +22,14 @@ void binary(unsigned long int n)
 }
 /**
  * print_binary - Convert decimal integers into binary
- * @n: 
- * Return: Always 0.
+ * @n: Integer being received from input
+ * Return: Void
  */
 void print_binary(unsigned long int n)
 {
 	if (n != 0)
 		binary(n);
-	
-	else 
+
+	else
 		_putchar('0');
 }
