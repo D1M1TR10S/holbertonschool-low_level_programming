@@ -1,8 +1,8 @@
 #include "lists.h"
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always EXIT_SUCCESS.
+ * free_dlistint - Frees the linked list
+ * @head: Pointer to the first node in linked list
+ * Return: Nothing
  */
 void free_dlistint(dlistint_t *head)
 {
@@ -13,5 +13,5 @@ void free_dlistint(dlistint_t *head)
 		temp = head->next;
 		free(head);
 		head = temp;
-	}	
+	}
 }
