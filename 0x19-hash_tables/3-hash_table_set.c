@@ -1,8 +1,10 @@
 #include "hash_tables.h"
 /**
  * hash_table_set - Create a new node and add to the hash table
- * @ht: 
- * Return: Always EXIT_SUCCESS.
+ * @ht: Hash table being added to
+ * @key: Key of new node
+ * @value: Value held by key
+ * Return: 1 on success and 0 on failure.
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
@@ -12,7 +14,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (key == NULL || ht == NULL || *key == '\0')
 		return (0);
-	if ((new_node = malloc(sizeof(hash_node_t *))) == NULL)
+	new_node = malloc(sizeof(hash_node_t *))
+	if (new_node == NULL)
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
@@ -38,5 +41,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
-	return(1);
+	return (1);
 }
