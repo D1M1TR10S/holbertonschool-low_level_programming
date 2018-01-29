@@ -7,36 +7,36 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *temp = *list;
-	listint_t *hold;
-	listint_t *start = *list;
+	listint_t *temp;
+	listint_t *sort;
 
-	while (start != NULL)
+	if (list == NULL || *list == NULL)
+		return;
+
+	for (sort = (*list)->next; sort != NULL; )
 	{
-		if (start->prev != NULL)
+		temp = sort;
+		if (sort->n < sort->prev->n)
 		{
-			temp = start;
-			if (temp->n < temp->prev->n)
+			while (temp->prev != NULL && temp->n < temp->prev->n)
 			{
-				hold = temp;
-				start = hold->prev;
-				start->next = hold->next;
-				start = start->next;
-				start->prev = hold->prev;
-				while (temp != NULL)
-				{
-					if (temp->prev->n < hold->n || temp->prev == NULL)
-						break;
-					temp = temp->prev;
-					hold->prev = temp->prev;
-					hold->next = temp;
-					temp->prev = hold;
-					temp = hold->prev;
-					temp->next = hold;
-					print_list(*list);
-				}
+				/* Extracts the node */
+				if (temp->next != NULL)
+					temp->next->prev = temp->prev;
+                        	temp->prev->next = temp->next;
+				/* Moves node up one */
+				temp->next = temp->prev;
+				temp->prev = temp->prev->prev;
+				/* Connects nodes around it */
+				if (temp->prev != NULL)	
+					temp->prev->next = temp;
+				temp->next->prev = temp;
+				if (temp->prev == NULL)
+					/* set head node to temp */
+					*list = temp;
+				print_list(*list);
 			}
 		}
-		start = start->next;
+		sort = sort->next;
 	}
 }
