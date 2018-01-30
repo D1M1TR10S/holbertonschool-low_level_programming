@@ -16,20 +16,19 @@ void selection_sort(int *array, size_t size)
 
 	for (i = 0; i < size; i++)
 	{
-		small = swap = array[i];
+		small = i;
 		for (s = i + 1; s < size; s++)
 		{
-			if (array[s] < small)
+			if (array[s] < array[small])
 			{
-				small = array[s];
-				idx = s;
+				small = s
 			}
 		}
-		if (small != swap)
+		if (small != i)
 		{
-			array[i] = small;
-			array[idx] = swap;
-			print_array(array, size);
+			swap = array[i]
+			array[i] = array[small];
+			array[small] = swap;
 		}
 	}
 }
