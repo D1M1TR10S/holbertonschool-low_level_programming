@@ -17,7 +17,7 @@ void selection_sort(int *array, size_t size)
 	for (i = 0; i < size; i++)
 	{
 		small = swap = array[i];
-		for (s = i; s < size; s++)
+		for (s = i + 1; s < size; s++)
 		{
 			if (array[s] < small)
 			{
