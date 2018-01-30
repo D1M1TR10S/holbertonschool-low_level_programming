@@ -4,7 +4,7 @@
  * @array: Pointer to array being sorted
  * @size: Size of array being sorted
  * return: Nothing
- */ 
+ */
 void selection_sort(int *array, size_t size)
 {
 	unsigned int i, s, idx;
@@ -31,5 +31,5 @@ void selection_sort(int *array, size_t size)
 			array[idx] = swap;
 			print_array(array, size);
 		}
-	}	
+	}
 }
