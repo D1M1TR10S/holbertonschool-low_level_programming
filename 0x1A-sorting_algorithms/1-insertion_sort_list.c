@@ -1,9 +1,9 @@
 #include "sort.h"
 #include <stdio.h>
 /**
- * main - Entry point
- *
- * Return: Always 0
+ * insertion_sort_list - Function sorting a linked list with insertion
+ * @list: Pointer to head of list
+ * Return: Nothing
  */
 void insertion_sort_list(listint_t **list)
 {
@@ -23,12 +23,12 @@ void insertion_sort_list(listint_t **list)
 				/* Extracts the node */
 				if (temp->next != NULL)
 					temp->next->prev = temp->prev;
-                        	temp->prev->next = temp->next;
+				temp->prev->next = temp->next;
 				/* Moves node up one */
 				temp->next = temp->prev;
 				temp->prev = temp->prev->prev;
 				/* Connects nodes around it */
-				if (temp->prev != NULL)	
+				if (temp->prev != NULL)
 					temp->prev->next = temp;
 				temp->next->prev = temp;
 				if (temp->prev == NULL)
