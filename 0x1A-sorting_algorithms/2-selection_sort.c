@@ -7,8 +7,7 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	unsigned int i, s, idx;
-	int small;
+	unsigned int i, s, small;
 	int swap;
 
 	if (array == NULL)
@@ -21,14 +20,15 @@ void selection_sort(int *array, size_t size)
 		{
 			if (array[s] < array[small])
 			{
-				small = s
+				small = s;
 			}
 		}
 		if (small != i)
 		{
-			swap = array[i]
+			swap = array[i];
 			array[i] = array[small];
 			array[small] = swap;
+			print_array(array, size);
 		}
 	}
 }
