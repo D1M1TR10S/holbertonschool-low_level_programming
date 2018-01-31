@@ -13,6 +13,9 @@ void quick_sort(int *array, size_t size)
 	int lo = 0;
 	int hi = size - 1;
 
+	if (array == NULL)
+		return;
+
 	quick_sorting(array, lo, hi, size);
 }
 /**
